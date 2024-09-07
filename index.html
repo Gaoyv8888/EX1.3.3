@@ -12,7 +12,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto auto;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: 100%;
     background-image: url('qpy.zzt.jpg');
     background-size: cover;
     background-position: center;
@@ -49,30 +49,33 @@
     justify-content: center;
     align-items: center;
     min-width: 100px; /* 设置最小宽度 */
-    min-height: 100px; /* 设置最小高度 */
+    min-height: 50px; /* 设置最小高度 */
     max-width: 100%; /* 设置最大宽度 */
     max-height: 100%; /* 设置最大高度 */
   }
   .section4-1 {
-    grid-row: 3;
-    grid-column: 1;
-    margin-top: -150px; /* 添加顶部间距 */
-	font-size: 1.2em;
+      grid-row: 3; /* 从第三行开始 */
+      grid-column: 1 / -1; /* 占据所有列 */
+      margin-top: 0; /* 移除顶部间距，或者根据需要调整 */
+      font-size: 1.2em;
   }
+  
   .section4-2 {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: -100px; /* 添加顶部间距 */
-	font-size: 1.2em;
+      grid-row: 4; /* 接下来是第四行 */
+      grid-column: 1 / -1; /* 占据所有列 */
+      margin-top: 0; /* 移除顶部间距，或者根据需要调整 */
+      font-size: 1.2em;
   }
+  
   .section4-3 {
-    grid-row: 4;
-    grid-column: 1 / span 2;
-    margin-top: 20px; /* 添加顶部间距 */
-	font-size: 1.2em;
+      grid-row: 5; /* 最后是第五行 */
+      grid-column: 1 / -1; /* 占据所有列 */
+      margin-top: 0; /* 根据需要调整顶部间距 */
+      font-size: 1.2em;
   }
+
   .back-arrow {
-  		    position: absolute;
+  		    position: fixed;
   		    top: 10px;
   		    left: 20px;
   		    width: 50px;
